@@ -1,0 +1,359 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-image: linear-gradient(90deg, #000000, #181615, #52403d, #58322a, #9e0707);
+  background-size: 500%;
+  animation: BackgroundAnimation 10s infinite;
+  background-image: url(../img/fondo.jpg);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Ajustes para el banner */
+.banner-img {
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.banner-img h1 {
+  font-size: 4rem;
+  text-shadow: -3px -3px;
+}
+
+span {
+  color: #9e0707;
+}
+
+/* Ajustes para el contenido */
+.index-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.index-content h2 {
+  color: lightgray;
+  font-size: 2.5rem;
+  font-family: 'calibri';
+  text-shadow: -3px -1px;
+}
+
+.index-content p {
+  color: lightgray;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: 'Georgia';
+  text-shadow: -3px 1px;
+}
+
+.start {
+  font-size: 1.5rem;
+  font-family: 'comic sans ms';
+  font-style: inherit;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background: #000000;
+  height: 40px;
+  align-items: center;
+  color: white;
+}
+
+/* Menú de navegación */
+.logo {
+  width: 120px;
+  height: 25px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 8vh;
+  background-color: #000000;
+  padding: 0 20px;
+}
+
+.ham {
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.ham span {
+  background-color: #f3f3f3;
+  display: block;
+  height: 3px;
+  width: 28px;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+.enlaces-menu {
+  display: flex;
+  padding: 0;
+}
+
+.enlaces-menu li {
+  padding: 0 20px;
+  list-style-type: none;
+  transition: 0.3s;
+}
+
+.enlaces-menu li a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #f3f3f3;
+  font-weight: 600;
+}
+
+.enlaces-menu li:hover {
+  background-color: rgb(62, 130, 197);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .ham {
+    display: block;
+  }
+
+  .enlaces-menu {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: right 0.3s ease-in-out;
+    padding-top: 60px;
+  }
+
+  .enlaces-menu li {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .enlaces-menu li a {
+    font-size: 2rem;
+  }
+
+  .enlaces-menu.activado {
+    right: 0;
+  }
+
+  .br-1.animado {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .br-2.animado {
+    opacity: 0;
+  }
+
+  .br-3.animado {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Animaciones */
+@keyframes BackgroundAnimation {
+  0% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 100% 40%;
+  }
+  100% {
+    background-position: 0% 40%;
+  }
+}
+ /*
+Ajustes para contenedor de video
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}*/
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+body {
+  overflow-x: hidden;
+}
+
+.ham {
+  display: block;
+}
+
+.enlaces-menu {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: right 0.3s ease-in-out;
+  padding-top: 60px;
+}
+
+.enlaces-menu li {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.enlaces-menu li a {
+  font-size: 2rem;
+}
+
+.enlaces-menu.activado {
+  right: 0;
+}
+
+.br-1.animado {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.br-2.animado {
+  opacity: 0;
+}
+
+.br-3.animado {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+}
+
+/* Ajustes para contenedor de video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  max-width: 100%;  /* Evita que se estire horizontalmente */
+  max-height: 100%; /* Evita que se estire verticalmente */
+}
+
+/* Ajustes para títulos de videos */
+.video-container h2 {
+  color: lightgray;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Swiper.js CSS */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.swiper-slide iframe {
+  width: 100%;
+  height: auto;
+}
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+.video-container h2 {
+  font-size: 1.5rem;
+}
+}
+
+/* Ajustes para las flechas de navegación del carrusel */
+.swiper-button-next, .swiper-button-prev {
+  width: 50px; /* Ajustar el tamaño de las flechas si es necesario */
+  height: 50px;
+  top: 50%; /* Centrar verticalmente */
+  transform: translateY(-50%);
+  z-index: 10; /* Asegurarse de que estén sobre el video */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  border-radius: 50%;
+}
+
+.swiper-button-next {
+  right: 10px; /* Separar del borde derecho */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Separar del borde izquierdo */
+}
+
+/* Asegurar que los videos tengan un z-index inferior a las flechas */
+.video-container iframe {
+  z-index: 5;
+}
+
+/* Contenedor responsivo para los videos */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+/* Estilos del iframe para que se ajuste al contenedor */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
