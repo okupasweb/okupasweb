@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Okupando la web - Capítulos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#"><img class="logo" src="./img/logo.png" alt="logo"></a>
+
+            <ul class="enlaces-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="capitulos.html">Capítulos</a></li>
+                <li><a href="acerca.html">Sobre el sitio</a></li>
+            </ul>
+
+            <button class="ham" type="button">
+                <span class="br-1"></span>
+                <span class="br-2"></span>
+                <span class="br-3"></span>
+            </button>
+        </nav>
+    </header>
+    <banner>
+        <div class="banner-img"> <h1>C<span>a</span>pitulos con audio original</h1></div>
+    </banner>
+    <br>
+    <hr>
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <h2>01 - Los 5 mandamientos.</h2>
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1OotIzOpb2wwUAF4OOdo5WJixRsEnZ121/preview" allowfullscreen allow="autoplay"></iframe>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <h2>02 - Bienvenidos al tren.</h2>
+                <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1ncp0mzJUcYpTlLkynfNsgQTNgvrCAnv6/preview" allowfullscreen allow="autoplay"></iframe>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <h2>03 - El ojo blindado.</h2>
+                <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/19RRrVyjcc_hMpOcEI-fSh-_KVwsfxAcR/preview" allowfullscreen allow="autoplay"></iframe>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <h2>04 - El beso de Judas.</h2>
+                <iframe src="https://drive.google.com/file/d/1_UHwfotXfhmMy7bbHWQr35D9g2KV65Jm/preview" allowfullscreen allow="autoplay"></iframe>
+            </div>
+            <div class="swiper-slide">
+                <h2>05 - El mascapito.</h2>
+                <iframe src="https://drive.google.com/file/d/1kXDSRKxtrKny6wNIF8RSY-cUMIUtfB3I/preview" allowfullscreen allow="autoplay"></iframe>
+            </div>
+            <div class="swiper-slide">
+                <h2>06 - Los mantenidos.</h2>
+                <iframe src="https://drive.google.com/file/d/1mbOS5XxBX1aGfdRHEj44epkqLBmJ2zBa/preview" allowfullscreen allow="autoplay"></iframe>
+            </div>
+            <div class="swiper-slide">
+                <h2>07 - Paranoia.</h2>
+                <iframe src="https://drive.google.com/file/d/1FG4O0bBoPfNXsl95fVNNZkvn5BFgiKqy/preview" allowfullscreen allow="autoplay"></iframe>
+            </div>
+            <div class="swiper-slide">
+                <h2>08 - El Pollo de Troya.</h2>
+                <iframe src="https://drive.google.com/file/d/1V7hTdmYXXCG9ODjHnmI5ktt0cYRimbxy/preview" allowfullscreen allow="autoplay"></iframe>
+            </div>
+            <div class="swiper-slide">
+                <h2>09 - El Guardián.</h2>
+                <iframe src="https://drive.google.com/file/d/1ML6IiM1WqXfl99JqaAB8XTuhpf1--GAg/preview" allowfullscreen allow="autoplay"></iframe>
+            </div>
+            <div class="swiper-slide">
+                <h2>10 - Miguel.</h2>
+                <iframe src="https://drive.google.com/file/d/1DFFHDCc5KmnjXtvNau76J1Dn_Pbmpsfd/preview" allowfullscreen allow="autoplay"></iframe>
+            </div>
+            <div class="swiper-slide">
+                <h2>11 - Adiós y buena suerte.</h2>
+                <iframe src="https://drive.google.com/file/d/101osHZfKqaJcAt0PeVhq6kD1qmIJSIUs/preview" allowfullscreen allow="autoplay"></iframe>
+            </div>
+        </div>
+        <!-- Agregar flechas de navegación -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Agregar paginación -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <footer>
+        <h3>Okupando la web - pagina sin fines de lucro &copy; 2023.</h3>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                loop: true,
+            });
+        });
+    </script>
+    <br>
+    <hr>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
